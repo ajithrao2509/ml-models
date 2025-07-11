@@ -4,10 +4,10 @@ import logging
 import joblib
 import numpy as np
 from fastapi import FastAPI, HTTPException, BackgroundTasks
-from app.schema import IrisInput
+from schema import IrisInput
 
 # Load the model
-model = joblib.load("model/iris_model.pkl")
+model = joblib.load("../model/iris_model.pkl")
 
 # Set up logging
 logging.basicConfig(filename="api.log", level=logging.INFO,
